@@ -4,7 +4,10 @@ skipWorld.MainMenu = function() {};
 
 skipWorld.MainMenu.prototype = {
     create: function() {
-        this.game.add.sprite(0, 0, 'mainbackground'); // add main background for game
+        var menubackground = this.game.add.sprite(0, 0, 'mainbackground'); // add main background for game
+		//get game width ratio vs texture size.
+		var scaleRatio = gameDiv.clientWidth/menubackground.width;
+		menubackground.scale.setTo(scaleRatio,scaleRatio);
 		
 		var versionText = this.game.add.text(this.game.world.width - 97, this.game.world.height - 47, '0.0.1', { fontSize: '12px', fill: '#000' });
 		
