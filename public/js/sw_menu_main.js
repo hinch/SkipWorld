@@ -20,13 +20,8 @@ skipWorld.MainMenu.prototype = {
 		//add buttons to group
 		mainbuttons.add(new_game_button);
 		mainbuttons.add(credit_game_button);
-		//process clicks with catch all
-		//this.input.onDown.add(clickButton, this);
     },
     update: function() {
-        //if( nBack_frames > 0) {
-        //    this.game.state.start('Game');
-        //}
     },
     newGameClick: function() {
        this.game.state.start('MainGame');
